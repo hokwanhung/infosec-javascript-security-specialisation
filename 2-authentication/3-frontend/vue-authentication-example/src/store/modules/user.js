@@ -11,6 +11,13 @@ const getters = {
 };
 
 const actions = {
+  // have to get the token from the localStorage, as it is not in a cookie.
+  // should put the token in the cookie, which is also easier to manage.
+
+  // !Important: always use HTTP-only domain-scoped, same-site expiring cookies.
+  // The content of the JWT is important for the server.
+  // Use a JSON Web Signature, or signed payload that are signed from the backend.
+  // But are not used for authenticating and only for holding data - not a harm.
   [USER_REQUEST]: ({ commit, dispatch }) => {
     commit(USER_REQUEST);
     apiCall({ url: "user/me" })

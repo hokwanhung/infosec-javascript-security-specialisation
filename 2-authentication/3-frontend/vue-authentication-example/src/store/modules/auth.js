@@ -9,6 +9,10 @@ import { USER_REQUEST } from "../actions/user";
 import apiCall from "utils/api";
 
 const state = {
+  // might make more sense to be put in the sessionStorage.
+  // might not want the user to open the website and to be authenticated directly.
+  // the token should be a HTTP-only token, and must not be accessible to JS (e.g., XSS attacks).
+  // Should put cookies (e.g., username, and other user data) for identifications in JS, but never token itself.
   token: localStorage.getItem("user-token") || "",
   status: "",
   hasLoadedOnce: false
@@ -41,8 +45,10 @@ const actions = {
     });
   },
   [AUTH_LOGOUT]: ({ commit }) => {
+    // make sure the token is invalidated in the logout routine.
     return new Promise(resolve => {
       commit(AUTH_LOGOUT);
+      // provide a call to backend to invalidate the token and the whole session.
       localStorage.removeItem("user-token");
       resolve();
     });

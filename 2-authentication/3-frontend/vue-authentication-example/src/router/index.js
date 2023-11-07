@@ -8,10 +8,12 @@ import store from "../store";
 Vue.use(Router);
 
 const ifNotAuthenticated = (to, from, next) => {
-  if (!store.getters.isAuthenticated) {
+  if (!store.getters.isAuthenticated) { // should be something like !document.cookie...
     next();
     return;
   }
+  // important to always allow access to some part of the website only after authentication.
+  // do not let scanners create weird journeys, and spam the backend with APIs calls - backend burst.
   next("/");
 };
 
