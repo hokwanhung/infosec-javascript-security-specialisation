@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+    <!-- This could also be done for the stylesheet. -->
+    <link rel="stylesheet" href="styles.css" integrity="sha256-0QWo7LDvxbWT2tbbQ97B53yJnYU3WhH" />
+</head>
+
+<body>
+    <!-- Use -sha384 or even -sha512 (the stongest available) to hash the JavaScript. -->
+    <!-- integrity % cat index.js |openssl dgst -sha384 -binary | openssl enc -base64 -A -->
+    <!-- As a hash is provided, the JavaScript file cannot be tempered without changing the hash. -->
+    <!-- Change the content in the integrity attribute with the hash you obtained from the above command. -->
+    <!-- It is only a recommendation right now, and browsers might not always support it. -->
+    <!-- And it only available for links right now, so no images or other forms of elements could be protected using this method. -->
+    <script src="index.js" integrity="sha256-0QWo7LDvxbWT2tbbQ97B53yJnYU3WhH"></script>
+    <p>Hello</p>
+</body>
+
+</html>

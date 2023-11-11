@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+// CSRF stands for "Cross-site Request Forgery".
+
+// CSRF happens when a malicious website performs operation towards another remote resource against which the user is authenticated,
+// as browser requests automatically include all cookies, including session cookies.
+
+// however, it is limtied by the application and privilege available on the target website.
+// Though, all protections against CSRF can be bypassed if there is an XSS on the target website, 
+// in which they could directly run arbitrary code on the target webste.
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Expresss App</title>
+</head>
+
+<body>
+    <p>Hello <%= name %>!</p>
+    <form class="form-example" action="/subscribe" method="post" autocomplete="off">
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example" hidden>
+            <input type="text" name="csrf_token" required value="<%= token %>"/>
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Subscribe!" />
+        </div>
+    </form>
+</body>
+
+</html>
