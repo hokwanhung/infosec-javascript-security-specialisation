@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Express App</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+
+        <!-- 2. Either to use Web Application Firewall to detect any attempts, 
+            or to sanitise every incoming things with sanitising libraries. -->
+        <!-- However, the sanitisation is limited as browsers are very permissive with executions.-->
+        <% for (let i=0; i < data.length; i++) { %>
+            <tr>
+                <td>
+                    <!-- 1. Escape everything you render in the template. -->
+                    <%= data[i].name %>
+                    <%= data[i].email %>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+
+</html>

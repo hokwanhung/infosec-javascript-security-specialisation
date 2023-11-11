@@ -1,0 +1,5 @@
+script-src 'self' https://*.jquery.com;
+
+img-src 'self';
+
+report-uri /report;

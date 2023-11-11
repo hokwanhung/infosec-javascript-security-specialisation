@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<!-- For a Express App with localhost:3000/?name= -->
+<!-- For a stored XSS, it is targetting the database. -->>
+<!-- Whenever the data with XSS attacks are stored, it stays in the database and affects the backend everytime it is run. -->
+
+<!-- Compared to reflected XSS that targets only one person, this targets anyone that has access to that page. -->
+<!-- Can have a <img> tag, and update the image later with a script that contains the actual cookie. -->
+<!-- By doing image or css request to a remote server, the malicious server could target the database. -->
+<!-- This action is not limited by the Cross-Origin-REsource-Sharing-Policy by default and can leak the cookie later. -->
+
+<!-- If the attacker knows where the attack payload would be loaded, it is called Stored XSS. -->
+<!-- If the attacker just injects as many payloads as possible and hope for the loading, it is called Blind XSS. -->
+<head>
+    <title>Express App</title>
+</head>
+
+<body>
+    <p>Hello <%= name %>!</p>
+    <form class="form-example" action="/subscribe" method="post" autocomplete="off"">
+        <div class=" form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Subscribe!">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+require-trusted-types-for 'script';
+
+trusted-types logPolicy otherPolicy;
