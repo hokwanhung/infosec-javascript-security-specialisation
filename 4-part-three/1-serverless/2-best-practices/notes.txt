@@ -1,0 +1,12 @@
+For serverless Node.js applications:
+
+1. Have the project in a Version Control System (never have something with an unsafe storage).
+
+2. Deploy code through CLI:
+2-alt. Use infrastucture as code and commit it on a VCS (never actually drag and drop things into an interface).
+
+With the above two items, it would be much easier to rebuild the server quickly if something happens.
+
+3. Have Secrets in env variables or, better, secret store (Cloud Provider ones, but could be expensive).
+
+4. Test locally and in CI (use code coverage in testing as well).
