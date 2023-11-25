@@ -35,4 +35,4 @@ console.log(c); // c { a: 1, b: 2, c: 3}
 c.sayHi(); 
 c.sayHello(); // hello
 
-// When prototype pollutions happen, either it would be on the class or the global prototype.
+// When prototype pollutions happen, either it would be on the class prototype or the global prototype.

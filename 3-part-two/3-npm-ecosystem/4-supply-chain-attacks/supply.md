@@ -44,3 +44,4 @@ module A version 1.0.0 on our own Verdaccio
 Verdaccio will get it from npm and cache it in 1.1.0
 
 Solution: npm disallow republish of versions after 24 hours as it has been reproved, unless you contact them and have their agreement to republish on it.
+
