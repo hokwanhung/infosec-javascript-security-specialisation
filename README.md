@@ -37,39 +37,18 @@ infosec-javascript-security-specialisation
  ┃ ┃ ┣ 1-refreshers
  ┃ ┃ ┣ 2-cookies
  ┃ ┃ ┗ 3-frontend
- ┃ ┃ ┃ ┗ vue-authentication-example
- ┃ ┃ ┃ ┃ ┣ src
- ┃ ┃ ┃ ┃ ┃ ┣ router
- ┃ ┃ ┃ ┃ ┃ ┗ store
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ modules
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 
  ┣ 2-part-one
  ┃ ┣ 1-xss
  ┃ ┃ ┣ 1-overview
  ┃ ┃ ┣ 2-reflected-xss
- ┃ ┃ ┃ ┣ routes
- ┃ ┃ ┃ ┗ views
  ┃ ┃ ┣ 3-stored-xss
- ┃ ┃ ┃ ┗ views
  ┃ ┃ ┣ 4-dom-based-xss
  ┃ ┃ ┣ 5-remote-code-injection
- ┃ ┃ ┃ ┣ public
- ┃ ┃ ┃ ┣ sinks
- ┃ ┃ ┃ ┗ 
  ┃ ┃ ┣ 6-csp-with-xss
- ┃ ┃ ┃ ┣ public
- ┃ ┃ ┃ ┗ 
  ┃ ┃ ┗ 7-trusted-types
- ┃ ┃ ┃ ┣ public
- ┃ ┃ ┃ ┗ 
  ┃ ┗ 2-csrf
  ┃ ┃ ┣ 1-overview
- ┃ ┃ ┃ ┣ evil
- ┃ ┃ ┃ ┣ routes
- ┃ ┃ ┃ ┗ views
  ┃ ┃ ┣ 2-clickjacking
- ┃ ┃ ┃ ┣ bank
- ┃ ┃ ┃ ┗ hackerland
  ┃ ┃ ┗ 3-resources-integrity
  ┣ 3-part-two
  ┃ ┣ 1-expressions
@@ -88,9 +67,6 @@ infosec-javascript-security-specialisation
  ┃ ┃ ┣ 1-definition
  ┃ ┃ ┣ 2-best-practices
  ┃ ┃ ┣ 3-nodejs-injection
- ┃ ┃ ┃ ┣ fs
- ┃ ┃ ┃ ┣ shi
- ┃ ┃ ┃ ┗ sqli
  ┃ ┃ ┗ 4-production-monitoring
  ┃ ┗ 2-desktop-security
 ```
